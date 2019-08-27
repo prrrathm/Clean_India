@@ -2,18 +2,25 @@
 <html>
 <head><title>google</title>
 <style>
+	html{
+		scroll-behavior: smooth;
+		transition: 2s;
+	}
 	body{
 		background-color: #eee;
-		background-image: url(pray.png);
 		background-attachment: fixed;
 		color: #eee;
 		letter-spacing: 3px;
 		font-size: 26px;
 		font-family: monospace;
 		margin: 0;
+		transition: 2s;
+	}
+	h1{
+		margin: 0;
 	}
 	.parts{
-		height: 100vh;
+		padding-bottom: 30px;
 	}
 	#one{
 		background-image:url('flower.jpg'), linear-gradient(rgba(150, 10, 70, 0.5), rgba(100, 10, 80, 0.5));
@@ -21,6 +28,7 @@
 		background-blend-mode: darken;
 		background-attachment: fixed;
 		background-position: center;
+		min-height: 100vh;
 	}
 	.title{
 		position: absolute;
@@ -84,19 +92,23 @@
 		left: 0;
 		padding-left: 150px;
 		padding-top: 20px; 
-	}
-	.menu-box a{ 
-		letter-spacing: 6px;
-		transition: 200ms;
-	}
-	.menu-box a:hover{
-		color: #eea140;
-		font-weight: 500;
+		z-index: 10;
+		background-image: linear-gradient(rgba(10, 10, 10, 0.26), transparent);
 	}
 	.menu-link{
 		margin-top: 40px;
 		margin-left: 30px;
 		margin-right: 30px;
+		letter-spacing: 6px;
+		padding: 5px;
+		transition: 100ms;
+		font-weight: 700;
+		text-shadow: 3px 2px 1px #101010;
+	}
+	.menu-link:hover{
+		color: #eea140;
+		font-weight: 900;
+		border: 3px solid orange;
 	}
 	.menu-box img{
 		position: absolute;
@@ -112,22 +124,60 @@
 		cursor: pointer;
 	}
 	#two{
-		background-color: rgba(100, 10, 80, 0.5);
-	}
-	#four{
-		background-color: rgba(100, 150, 80, 0.5);
+		background-color: #eee;
+		color: #101010;
+		min-height: 300vh;
 	}
 	#three{
+		background-color: rgba(100, 150, 80, 0.5);
+		height: 100%;
+		padding: 30px;
+	}
+	#four{
 		background-color: #201015;
+		color: #fefe60;
+		min-height: 300vh;
+	}
+	.title-h1{
+		position: sticky;
+		top: 0;
+		width: 40%;
+		padding-top: 200px;
+		font-size: 100px;
+		font-family: fantasy;
+		font-weight: 900;
+		margin-left: 60px;
+	}
+	.info{
+		font-family: monospace;
+		width: 40%;
+		font-weight: 900;
+		margin-left: 50%;
+		line-height: 50px;
+		font-size: 30px;
+		letter-spacing: 3px;
+	}
+	footer{
+		background-color: #101010;
+		position: sticky;
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+	}
+	#modi{
+		background-image: url('modi.jpg'),  linear-gradient(rgba(10, 10, 10, 0.5), rgba(100, 10, 80, 0.5));
+		height: 100vh;
+		background-attachment: fixed;
+		background-size: cover;
 	}
 </style>
 <body>
 	<div class="menu-box">
 		<img src="elephant.png">
-		<a class="menu-link" href="">Home</a>
-		<a class="menu-link" href="">About</a>
-		<a class="menu-link" href="">Swacch Bharat</a>
-		<a class="menu-link" href="">Goals</a>
+		<a class="menu-link" href="#one">Home</a>
+		<a class="menu-link" href="#two">About</a>
+		<a class="menu-link" href="#three">Why Clean India?</a>
+		<a class="menu-link" href="#four">Goals</a>
 	</div>
 	<div class="parts" id="one">
 		<div class="title">CLEAN AND HEALTHY<br><div id="india">INDIA</div></div>
@@ -139,14 +189,27 @@
 		<div class="quote-box">The land of spices needs to protect its heritage.</div>
 	</div>
 	<div class="parts" id="two">
-		
+		<h1 class="title-h1">ABOUT THE<br>MISSION</h1>
+		<div class="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reiciendis id atque ipsam iusto vitae asperiores hic corporis voluptatum est ipsa assumenda doloribus ex ut neque ratione, illum illo similique?
+			<br><br><br>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reiciendis id atque ipsam iusto vitae asperiores hic corporis voluptatum est ipsa assumenda doloribus ex ut neque ratione, illum illo similique?
+			<br><br><br>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reiciendis id atque ipsam iusto vitae asperiores hic corporis voluptatum est ipsa assumenda doloribus ex ut neque ratione, illum illo similique?
+		</div>
 	</div>
 	<div class="parts" id="three">
-		
+		<div id="modi"></div>
 	</div>	
 	<div class="parts" id="four">
-		
+		<h1 class="title-h1">INDIA'S<br>GOALS</h1>
+		<div class="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reiciendis id atque ipsam iusto vitae asperiores hic corporis voluptatum est ipsa assumenda doloribus ex ut neque ratione, illum illo similique?
+			<br><br><br>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reiciendis id atque ipsam iusto vitae asperiores hic corporis voluptatum est ipsa assumenda doloribus ex ut neque ratione, illum illo similique?
+			<br><br><br>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti reiciendis id atque ipsam iusto vitae asperiores hic corporis voluptatum est ipsa assumenda doloribus ex ut neque ratione, illum illo similique?
+		</div>		
 	</div>
+	<footer>A Project by Pratham Sharma.</footer>
 </body>
 </head>
 </html>
